@@ -24,12 +24,22 @@ It’s OK if apt-get reports that none of these packages are installed.
 
 The contents of /var/lib/docker/, including images, containers, volumes, and networks, are preserved. The Docker Engine - Community package is now called docker-ce.
 
+
+
+
+
+
 Supported storage drivers
 Docker Engine - Community on Ubuntu supports overlay2, aufs and btrfs storage drivers.
 
 Note: In Docker Engine - Enterprise, btrfs is only supported on SLES. See the documentation on btrfs for more details.
 
 For new installations on version 4 and higher of the Linux kernel, overlay2 is supported and preferred over aufs. Docker Engine - Community uses the overlay2 storage driver by default. If you need to use aufs instead, you need to configure it manually. See aufs
+
+
+
+
+
 
 Install Docker Engine - Community
 You can install Docker Engine - Community in different ways, depending on your needs:
@@ -40,8 +50,15 @@ Some users download the DEB package and install it manually and manage upgrades 
 
 In testing and development environments, some users choose to use automated convenience scripts to install Docker.
 
+
+
+
 Install using the repository
 Before you install Docker Engine - Community for the first time on a new host machine, you need to set up the Docker repository. Afterward, you can install and update Docker from the repository.
+
+
+
+
 
 SET UP THE REPOSITORY
 Update the apt package index:
@@ -55,9 +72,16 @@ $ sudo apt-get install \
     curl \
     gnupg-agent \
     software-properties-common
+
+
+
 Add Docker’s official GPG key:
 
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+
+
+
 Verify that you now have the key with the fingerprint 9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88, by searching for the last 8 characters of the fingerprint.
 
 $ sudo apt-key fingerprint 0EBFCD88
