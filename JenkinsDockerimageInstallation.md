@@ -25,3 +25,18 @@ services:
       - net
 networks:
   net:</b>
+  
+  <pre>version: &apos;3&apos;
+services:
+  jenkins:
+    container_name: jenkins
+    image: jenkins/jenkins
+    ports:
+      - &quot;8080:8080&quot;
+    volumes:
+      - &quot;$PWD/jenkins_home:/var/jenkins_home&quot;
+    networks:
+      - net
+networks:
+  net:
+</pre>
