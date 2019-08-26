@@ -12,31 +12,20 @@ it will dowload all packages and if u want check weather jenkins dowloaded or no
 - create another directory with a name <b>jenkins_home</b> within <b>jenkins-date</b>
 - Lets create one docker-compose file with a name <b>docker-compose.yml</b>
  
-<b>version: '3'
-services:
-  jenkins:
-    container_name: jenkins
-    image: jenkins/jenkins
-    ports:
-      - "8080:8080"
-    volumes:
-      - "$PWD/jenkins_home:/var/jenkins_home"
-    networks:
-      - net
-networks:
-  net:</b>
-  
+<b>
   <pre>version: &apos;3&apos;
 services:
   jenkins:
     container_name: jenkins
-    image: jenkins/jenkins
+    image: jenkins/jenkins         //name of the image
     ports:
-      - &quot;8080:8080&quot;
+      - &quot;8080:8080&quot;      //maping
     volumes:
-      - &quot;$PWD/jenkins_home:/var/jenkins_home&quot;
+      - &quot;$PWD/jenkins_home:/var/jenkins_home&quot;   //to keep data in /var/jenkins_home
     networks:
       - net
 networks:
   net:
 </pre>
+</b>
+
