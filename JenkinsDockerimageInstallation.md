@@ -29,3 +29,37 @@ networks:
 </pre>
 </b>
 
+
+- provide permission for user to use directory <b>jenkins_home</b>
+    - for that we need to know uid of the user
+    - use command <b> $ id </b> to get UID of the user
+    - provide permission using following command
+      <b> $ sudo chown 1000:1000 jenkins_home -R </b>
+        - where 1000 is UID 
+        - -R recurssive
+ 
+ 
+ - run the docker compose file to run jenkin server using command
+     - <b> $ docker-compose up -d </b>
+     
+     
+     
+  - go to browser and using your system ip address follwed by 8080
+    -192.168.43.171:8080
+    
+  - then it will ask password
+     for that use command
+     
+    <b> $docker logs -f jenkins</b>
+    
+   - you can find hexa code over there and copy and ppaste n browser
+   - install using suggested pugins
+   - enter username and password
+   
+   jenkins ready to use now............................
+   
+  
+        
+      
+  
+
