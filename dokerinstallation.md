@@ -1,11 +1,12 @@
-OS requirements
-To install Docker Engine - Community, you need the 64-bit version of one of these Ubuntu versions:
+<h1>OS requirements</h1>
+
+<p>To install Docker Engine - Community, you need the 64-bit version of one of these Ubuntu versions:
 
 Disco 19.04
 Cosmic 18.10
 Bionic 18.04 (LTS)
 Xenial 16.04 (LTS)
-Docker Engine - Community is supported on x86_64 (or amd64), armhf, arm64, s390x (IBM Z), and ppc64le (IBM Power) architectures.
+Docker Engine - Community is supported on x86_64 (or amd64), armhf, arm64, s390x (IBM Z), and ppc64le (IBM Power) architectures.</p>
 
 
 
