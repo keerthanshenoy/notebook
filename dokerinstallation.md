@@ -116,3 +116,33 @@ Images, containers, volumes, or customized configuration files on your host are 
 $ sudo rm -rf /var/lib/docker
 You must delete any edited configuration files manually.
 
+
+<h2><u>Reference</u></h2>
+https://www.linode.com/docs/applications/containers/install-docker-ce-ubuntu-1804/
+
+
+
+<h1>Install DOCKER Compose on Linux systems</h1>
+
+On Linux, you can download the Docker Compose binary from the Compose repository release page on GitHub. Follow the instructions from the link, which involve running the curl command in your terminal to download the binaries. These step-by-step instructions are also included below.
+
+For alpine, the following dependency packages are needed: py-pip, python-dev, libffi-dev, openssl-dev, gcc, libc-dev, and make.
+
+<h3>Run this command to download the current stable release of Docker Compose:</h3>
+
+<b> sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose </b>
+
+
+To install a different version of Compose, substitute 1.24.1 with the version of Compose you want to use.
+
+If you have problems installing with curl, see Alternative Install Options tab above.
+
+
+
+<h3>Apply executable permissions to the binary:</h3>
+
+<b>sudo chmod +x /usr/local/bin/docker-compose</b>
+
+
+Note: If the command docker-compose fails after installation, check your path. You can also create a symbolic link to /usr/bin or any other directory in your path.
+
