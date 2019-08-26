@@ -146,3 +146,5 @@ If you have problems installing with curl, see Alternative Install Options tab a
 
 Note: If the command docker-compose fails after installation, check your path. You can also create a symbolic link to /usr/bin or any other directory in your path.
 
+<h2>Reference</h2>
+https://docs.docker.com/compose/install/
