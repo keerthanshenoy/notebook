@@ -82,16 +82,16 @@ x86_64 / amd64
 INSTALL DOCKER ENGINE - COMMUNITY
 
 
-Update the apt package index.
+<h3>Update the apt package index.</h3>
 
-$ sudo apt-get update
-
-
+<b>$ sudo apt-get update</b>
 
 
-Install the latest version of Docker Engine - Community and containerd, or go to the next step to install a specific version:
 
-$ sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+<h3>Install the latest version of Docker Engine - Community and containerd, or go to the next step to install a specific version:</h3>
+
+<b>$ sudo apt-get install docker-ce docker-ce-cli containerd.io</b>
 
 
 
