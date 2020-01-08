@@ -1,0 +1,66 @@
+Step 1: Set up Prerequisites (make sure you have jdk 1.8 or more).
+AWS account, AWS Identity and Access Management(IAM) user name and password, an Amazon EC2 key pair, and a configured Virtual Private Cloud(VPC). Setting up to Host a Web App on AWS
+
+
+Step 2: Launch an EC2 Instance.
+Create a Security Group for Your Amazon EC2 Instance
+ADD RURLES   select custom TCP
+enter port number 8080
+access select anywhere
+
+Launch your EC2 Instance
+
+
+Step 3 : Install and Configure Jenkins
+In this step you will deploy Jenkins on your EC2 instance by completing the following tasks:
+Connect to Your Linux Instance
+
+Download and Install Jenkins
+Configure Jenkins
+
+Before doing the steps make sure you have java1.8 rather then default java1.7 ship with Amazon AMI. If you could see the 1.7 version you can uninstall and install the 1.8 using following commands,
+[ec2-user ~]$ sudo yum remove java-1.7.0-openjdk
+[ec2-user ~]$ sudo yum install java-1.8.0
+
+
+Download and Install Jenkins
+1. To ensure that your software packages are up to date on your instance, use the following command to perform a quick software update:
+[ec2-user ~]$ sudo yum update –y
+
+
+2. Add the Jenkins repo using the following command:
+[ec2-user ~]$ sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
+
+
+3. Import a key file from Jenkins-CI to enable installation from the package:
+[ec2-user ~]$ sudo rpm --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
+
+
+4. Install Jenkins:
+[ec2-user ~]$ sudo yum install jenkins -y
+
+
+5. Start Jenkins as a service.
+Note : Before running the Jenkins, make sure your 8080 port is available or else you could run Jenkins.
+on any other available port by simply changing the port inside the configuration file of CentOS rpm based
+linux i.e. /etc/sysconfig/jenkins file(The location in debian based linux is /var/default/jenkins),
+change the port as JENKINS_PORT=”8081”
+
+[ec2-user ~]$ sudo service jenkins start
+
+optional:
+To start the jenkins service at boot-up, you can run,
+[ec2-user ~]$ sudo chkconfig jenkins on
+or
+[ec2-user ~]$ systemctl start jenkins.service
+[ec2-user ~]$ systemctl enable jenkins.service
+
+
+Then, finally you could be able to visit your server IP or public DNS at the above port to get the jenkins dashboard 
+by making sure that the port is open i.e. you added the inbould rule for that port on your AMI server.
+As, in my case the port is 8081, I’ll visit the following address,
+http://server-ip-address:8081/ You can see the below screen as you visited above URL,
+
+
+
+
